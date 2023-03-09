@@ -15,7 +15,8 @@ body{
     overflow: scroll;
 }
 .image{
-    width:170px;
+    width:20vh;
+    height: 17vh;
     padding: 5px;  
 }
 .contenedor{
@@ -55,10 +56,10 @@ body{
     margin: 0 5%;
 }
 .foto{
-    width: 25%;
+    width: 25vh;
 }
 .foto_buscar{
-    width: 80%;
+    width: 25vh;
 }
 
 .info{
