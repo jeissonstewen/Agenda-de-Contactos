@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100vh;
+}
+.header{
+    height: 20vh;
+    display: flex;
+    overflow: scroll;
+}
+.image{
+    width:170px;
+    padding: 5px;  
+}
+.contenedor{
+    width: 60%;
+    margin: 2% auto;
+    height: 60vh;
+    border: solid 1px;
+    padding: 2%;
+}
+.title{
+    text-align: center;
+}
+.buscar{
+    border: solid 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2% 0;
+    height: 60%;
+}
+.buscar__info{
+    width: 65%;
+    text-align: center;
+}
+.criterio, .name{
+    font-size: x-large;
+}
+.text, .select{
+    width: 80%;
+    padding: 1%;
+}
+.botones{
+    margin: 2%;
+}
+.btn_buscar, .btn_agregar{
+    padding: 2% 10%;
+    margin: 0 5%;
+}
+.foto{
+    width: 25%;
+}
+.foto_buscar{
+    width: 80%;
+}
+
+.info{
+    border: solid 1px;
+    padding: 1% 5%;
+    height: 20%;
+}
