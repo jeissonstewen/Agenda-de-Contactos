@@ -5,7 +5,15 @@ const foto = document.querySelector('.foto')
 const nombre = document.getElementById('text')
 const criterio = document.getElementById('criterio')
 console.log(contactos)
-let datos = Array.from(contactos)
+/* let datos = Array.from(contactos) */
+let datos = ''
+
+if(localStorage.getItem('contactos')==null){
+    datos = [...contactos]
+    localStorage.setItem('contactos',JSON.stringify(datos))
+} else {
+    datos = JSON.parse(localStorage.getItem('contactos'))
+}
 datos.forEach(imagen => {
     fotos.innerHTML += `
     <div class="contactos" id="contactos">
@@ -64,4 +72,10 @@ addEventListener('click', (event)=>{
             }
         }
     }
+    if(event.target.className =='btn_agregar'){
+        /* window.open('../HTML/agregar.html') */
+        location = '../HTML/agregar.html'
+    }
+
+
 })
