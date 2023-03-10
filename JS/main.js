@@ -1,9 +1,10 @@
 import contactos from './contactos.js'
-const fotos = document.querySelector('.header')
+const fotos = document.querySelector('.header') //fotos principales
 const info = document.querySelector('.info')
-const foto = document.querySelector('.foto')
+const foto = document.querySelector('.foto') //foto de cada contacto a buscar
 const nombre = document.getElementById('text')
 const criterio = document.getElementById('criterio')
+const image = document.getElementById('image')
 console.log(contactos)
 /* let datos = Array.from(contactos) */
 let datos = ''
@@ -17,7 +18,7 @@ if(localStorage.getItem('contactos')==null){
 datos.forEach(imagen => {
     fotos.innerHTML += `
     <div class="contactos" id="contactos">
-    <img class="image" src=${imagen.foto} alt="">
+    <img class="image" src=${imagen.foto} alt="" title="${imagen.nombre}">
     </div>
     `
 })
@@ -32,7 +33,6 @@ addEventListener('click', (event)=>{
             `
     }
 })
-
 addEventListener('click', (event)=>{
     if(event.target.className =='btn_buscar'){
         /* console.log('si'+nombre.value) */
@@ -70,12 +70,11 @@ addEventListener('click', (event)=>{
                 <p>Gustos: <span>${datos[index].gustos}</span></p>
                 `
             }
+
         }
     }
     if(event.target.className =='btn_agregar'){
         /* window.open('../HTML/agregar.html') */
         location = '../HTML/agregar.html'
     }
-
-
 })

@@ -14,5 +14,7 @@ addEventListener('click', (event)=>{
         contactos.push({nombre:nombre.value, apellido:apellido.value,numero:numero.value,gustos:(gustos.value).split(" "),foto:url.value})
         localStorage.setItem('contactos', JSON.stringify(contactos))
         location = '../index.html'
+    } else if(event.target.className =='btn_cancelar'){
+        location = '../index.html'
     }
 })
